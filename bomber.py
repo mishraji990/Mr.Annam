@@ -239,7 +239,7 @@ def banner():
       ██    ██   ██ ██  ██ ██ ▒ ██ ██  ██         
       ██    ██████▒ ▒████▒ ██   ██ █████▒         
       ▒▒    ▒▒▒▒▒▒   ▒▒▒▒  ▒▒   ▒▒ ▒▒▒▒▒          
-                                         """, 'green')
+                                         """, 'yellow')
     print()
 
 
@@ -264,7 +264,7 @@ def infinite(pn, dl, ch, max):
             continue
         os.system('rm proc.xxx >/dev/null 2>&1')
         count_inf += 1
-        # os.system('echo SpeedX >> count.xxx')
+        # os.system('echo VikashMishra >> count.xxx')
         time.sleep(float(dl))
         if (count_inf > maxlim):
             exit()
@@ -426,7 +426,7 @@ def start(target, counter, delay, ch, cc):
                 else:
                     print('\n\n\tSorry Your Country is Not Supported...')
                     print(
-                        '\t\tPlease Send A Mail To ggspeedx29@gmail.com To Let Us Know...')
+                        '\t\tPlease Send A Mail To bikashmishraji990@gmail.com To Let Us Know...')
                     input('Press Enter To Exit...')
                     exit()
         print("==================================================================")
@@ -466,7 +466,7 @@ def update():
     stuff_to_update = ['bomber.py', '.version']
     for fl in stuff_to_update:
         dat = urllib.request.urlopen(
-            "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/" + fl).read()
+            "https://raw.githubusercontent.com/Mr.Annam/TBomb/master/" + fl).read()
         file = open(fl, 'wb')
         file.write(dat)
         file.close()
@@ -486,7 +486,7 @@ except Exception:
     exit()
 print('\tChecking For Updates...')
 ver = urllib.request.urlopen(
-    "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/.version").read().decode('utf-8')
+    "https://raw.githubusercontent.com/Mr.Annam/TBomb/master/.version").read().decode('utf-8')
 verl = ''
 try:
     verl = open(".version", 'r').read()
@@ -500,7 +500,7 @@ print("Your Version is Up-To-Date")
 print('\n\n\t\t\tStarting TBomb...\n\n')
 try:
     noti = urllib.request.urlopen(
-        "https://raw.githubusercontent.com/TheSpeedX/TBomb/master/.notify").read().decode('utf-8')
+        "https://raw.githubusercontent.com/Mr.Annam/TBomb/master/.notify").read().decode('utf-8')
     noti = noti.upper().strip()
     if len(noti) > 10:
         print('\n\n\tNOTIFICATION: ' + noti + '\n\n')
@@ -534,11 +534,11 @@ try:
 except Exception:
     type = 0
 if type == 1:
-    nm = int(input("Enter Number of Calls To Send(Maximum 100): "))
-    if nm > 100:
+    nm = int(input("Enter Number of Calls To Send(Maximum 1000): "))
+    if nm > 1000:
         print("\t\tYou Have Entered " + str(nm) +
-              ".\n\tNormalizing Value To 100")
-        nm = 100
+              ".\n\tNormalizing Value To 1000")
+        nm = 1000
     dl = float(input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
 elif type == 0:
     if cc == "91":
